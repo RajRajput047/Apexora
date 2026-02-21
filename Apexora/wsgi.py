@@ -8,9 +8,12 @@ https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi/
 """
 
 import os
-from django.core.asgi import get_asgi_application
+from django.core.wsgi import get_wsgi_application
 
 # Changed from 'webdev_services.settings' to 'Apexora.settings'
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Apexora.settings')
+os.environ.setdefault(
+    'DJANGO_SETTINGS_MODULE',
+    'Apexora.settings'
+)
 
-application = get_asgi_application()
+application = get_wsgi_application()
