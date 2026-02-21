@@ -1,0 +1,76 @@
+{% extends 'website/base.html' %}
+{% block title %}Technologies{% endblock %}
+{% block content %}
+<div class="technologies-section py-5">
+    <div class="container">
+        <h1 class="section-title text-center mb-5">Technologies We Use</h1>
+        <p class="section-subtitle text-center mb-5">We leverage cutting-edge tools and frameworks to deliver high-quality web development, data extraction, and API solutions tailored to your needs.</p>
+        
+        <div class="row">
+            <!-- Web Development -->
+            <div class="col-lg-4 mb-4">
+                <div class="card tech-card h-100 shadow">
+                    <div class="card-body">
+                        <i class="fas fa-code tech-icon"></i>
+                        <h4 class="card-title text-center">Web Development</h4>
+                        <ul class="list-unstyled">
+                            <li><strong>HTML5 & CSS3:</strong> Building responsive, semantic web structures and modern styling.</li>
+                            <li><strong>JavaScript:</strong> Adding interactivity and dynamic functionality to websites.</li>
+                            <li><strong>Bootstrap 5:</strong> Rapid prototyping with responsive components and utilities.</li>
+                            <li><strong>Python Django:</strong> Full-stack framework for scalable, secure web applications.</li>
+                            <li><strong>React:</strong> Component-based library for building interactive user interfaces.</li>
+                            <li><strong>Node.js:</strong> Server-side JavaScript for backend logic and API integration.</li>
+                            <li><strong>Sass:</strong> Advanced CSS preprocessor for maintainable and modular stylesheets.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Data Extraction -->
+            <div class="col-lg-4 mb-4">
+                <div class="card tech-card h-100 shadow">
+                    <div class="card-body">
+                        <i class="fas fa-database tech-icon"></i>
+                        <h4 class="card-title text-center">Data Extraction</h4>
+                        <ul class="list-unstyled">
+                            <li><strong>Python:</strong> Core language for scripting and automation in data tasks.</li>
+                            <li><strong>Scrapy:</strong> Powerful framework for large-scale web scraping and crawling.</li>
+                            <li><strong>BeautifulSoup:</strong> Library for parsing HTML and XML to extract data.</li>
+                            <li><strong>Selenium:</strong> Tool for automating web browsers to handle dynamic content.</li>
+                            <li><strong>Playwright:</strong> Modern automation for end-to-end testing and data scraping.</li>
+                            <li><strong>MongoDB & PostgreSQL:</strong> NoSQL and SQL databases for storing and querying extracted data.</li>
+                            <li><strong>Pandas:</strong> Data manipulation library for cleaning and analyzing extracted datasets.</li>
+                            <li><strong>Requests:</strong> HTTP library for efficient API calls and data fetching.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- API Development -->
+            <div class="col-lg-4 mb-4">
+                <div class="card tech-card h-100 shadow">
+                    <div class="card-body">
+                        <i class="fas fa-cogs tech-icon"></i>
+                        <h4 class="card-title text-center">API Development</h4>
+                        <ul class="list-unstyled">
+                            <li><strong>Python:</strong> Versatile for backend logic and API scripting.</li>
+                            <li><strong>Django REST Framework:</strong> Building RESTful APIs with authentication and serialization.</li>
+                            <li><strong>FastAPI:</strong> High-performance framework for asynchronous API development.</li>
+                            <li><strong>GraphQL:</strong> Query language for flexible, efficient data fetching.</li>
+                            <li><strong>PostgreSQL:</strong> Relational database for secure, scalable API data storage.</li>
+                            <li><strong>OpenAI API:</strong> Integrating AI-powered features like chatbots for enhanced user interaction.</li>
+                            <li><strong>JWT (JSON Web Tokens):</strong> Secure authentication for API access and user sessions.</li>
+                            <li><strong>Docker:</strong> Containerization for easy deployment and scalability of API services.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <p class="tech-note">Our tech stack is continuously updated to incorporate the latest innovations, ensuring reliable and future-proof solutions.</p>
+            <a href="{% url 'contact' %}" class="btn btn-primary btn-lg tech-cta-btn">Discuss Your Project</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
