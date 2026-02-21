@@ -15,7 +15,7 @@ gunicorn==21.2.0
 # Cloudinary
 cloudinary==1.36.0
 django-cloudinary-storage==0.3.0
-Pillow==10.1.0
+Pillow>=10.1.0,<11
 
 # Security
 django-cors-headers==4.3.1
