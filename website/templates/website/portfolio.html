@@ -1,0 +1,96 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %}Portfolio{% endblock %}
+{% block content %}
+<div class="portfolio-section py-5">
+    <div class="container">
+        <h1 class="section-title text-center mb-5">Our Portfolio</h1>
+        <p class="section-subtitle text-center mb-5">Explore our successful projects in web development and data extraction, showcasing innovative solutions and measurable results.</p>
+        
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card portfolio-card h-100 shadow">
+                    <img src="{% static 'images/project1.jpg' %}" class="card-img-top" alt="Reviews Scraping Project">
+                    <div class="card-body">
+                        <h5 class="card-title">Reviews Scraping</h5>
+                        <p class="card-text">
+                            Developed a robust web scraping solution to extract customer reviews from e-commerce sites. Used Python, Scrapy, and BeautifulSoup for efficient data collection, resulting in 50% faster insights for client decision-making.
+                        </p>
+                        <p class="tech-used"><strong>Technologies:</strong> Python, Scrapy, BeautifulSoup, PostgreSQL</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card portfolio-card h-100 shadow">
+                    <img src="{% static 'images/project2.jpg' %}" class="card-img-top" alt="Car Data Extraction Project">
+                    <div class="card-body">
+                        <h5 class="card-title">Car Data Extraction</h5>
+                        <p class="card-text">
+                            Built an automated system to scrape and process car listings from multiple websites. Integrated Selenium for dynamic content handling, delivering clean, structured data that boosted client sales by 30%.
+                        </p>
+                        <p class="tech-used"><strong>Technologies:</strong> Python, Selenium, Pandas, MongoDB</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card portfolio-card h-100 shadow">
+                    <img src="{% static 'images/project3.jpg' %}" class="card-img-top" alt="E-Commerce Website">
+                    <div class="card-body">
+                        <h5 class="card-title">E-Commerce Website</h5>
+                        <p class="card-text">
+                            Created a full-stack e-commerce platform with Django and React. Features include user authentication, payment integration, and responsive design, achieving a 40% increase in online conversions.
+                        </p>
+                        <p class="tech-used"><strong>Technologies:</strong> Django, React, Bootstrap, PostgreSQL</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card portfolio-card h-100 shadow">
+                    <img src="{% static 'images/project4.jpg' %}" class="card-img-top" alt="API for Data Analytics">
+                    <div class="card-body">
+                        <h5 class="card-title">API for Data Analytics</h5>
+                        <p class="card-text">
+                            Designed a RESTful API using FastAPI for real-time data analytics. Integrated with OpenAI for AI-driven insights, enabling clients to process large datasets efficiently and reduce analysis time by 60%.
+                        </p>
+                        <p class="tech-used"><strong>Technologies:</strong> FastAPI, Python, OpenAI API, Docker</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card portfolio-card h-100 shadow">
+                    <img src="{% static 'images/project5.jpg' %}" class="card-img-top" alt="Dashboard for Business Intelligence">
+                    <div class="card-body">
+                        <h5 class="card-title">Dashboard for Business Intelligence</h5>
+                        <p class="card-text">
+                            Developed an interactive dashboard with Django and Chart.js for visualizing extracted data. Provided actionable reports, helping clients improve operational efficiency by 25%.
+                        </p>
+                        <p class="tech-used"><strong>Technologies:</strong> Django, JavaScript, Chart.js, PostgreSQL</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card portfolio-card h-100 shadow">
+                    <img src="{% static 'images/project6.jpg' %}" class="card-img-top" alt="Mobile App API Integration">
+                    <div class="card-body">
+                        <h5 class="card-title">Mobile App API Integration</h5>
+                        <p class="card-text">
+                            Integrated APIs for a mobile app using Django REST Framework. Ensured secure data flow and scalability, supporting 10,000+ users with zero downtime.
+                        </p>
+                        <p class="tech-used"><strong>Technologies:</strong> Django REST Framework, Python, JWT, PostgreSQL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <p class="portfolio-note">These projects demonstrate our expertise in delivering tailored solutions. Have a project in mind?</p>
+            <a href="{% url 'contact' %}" class="btn btn-primary btn-lg portfolio-cta-btn">Start Your Project</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
