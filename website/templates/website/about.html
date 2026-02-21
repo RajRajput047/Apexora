@@ -1,0 +1,70 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %}About Us{% endblock %}
+{% block content %}
+<div class="about-section py-5">
+    <div class="container">
+        <h1 class="section-title text-center mb-5">About Us</h1>
+        
+        <!-- Motivation Section -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8">
+                <div class="card motivation-card shadow">
+                    <div class="card-body text-center">
+                        <i class="fas fa-lightbulb motivation-icon"></i>
+                        <h3 class="card-title">Our Motivation</h3>
+                        <p class="card-text">
+                            We simplify technology for businesses by delivering reliable web development and data extraction solutions. Driven by the goal of turning complex web data into meaningful insights, we build digital products that create real value. Every project we take on is guided by quality, efficiency, and client satisfaction, whether it’s developing scalable web applications or extracting accurate, structured data to empower smarter business decisions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Founders Section -->
+        <h2 class="section-title text-center mb-5">Meet Our Founders</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-5 mb-4">
+                <div class="card founder-card shadow h-100">
+                    <img src="{% static 'images/founder1.jpg' %}" alt="Raj Rajput" class="card-img-top founder-photo">
+                    <div class="card-body text-center">
+                        <h4 class="card-title founder-name">Raj Rajput</h4>
+                        <p class="founder-role text-muted">Co-Founder & Head of Data Solutions</p>
+                        <p class="card-text founder-bio">
+                            Raj leads the data extraction team with expertise in web scraping, automation, and delivering high-quality structured data to help businesses make informed decisions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 mb-4">
+                <div class="card founder-card shadow h-100">
+                    <img src="{% static 'images/founder2.jpg' %}" alt="Nikhil Singh" class="card-img-top founder-photo">
+                    <div class="card-body text-center">
+                        <h4 class="card-title founder-name">Nikhil Singh</h4>
+                        <p class="founder-role text-muted">Co-Founder & Head of Web Solutions</p>
+                        <p class="card-text founder-bio">
+                            Nikhil heads the web development division, specializing in building scalable, secure, and user-friendly web applications that drive digital transformation for clients.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Details Section -->
+        <h2 class="section-title text-center mb-5">Get In Touch</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="card contact-details-card shadow">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Contact Information</h4>
+                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> info@webdevservices.com</p>
+                        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +91 7566489988, +91 9691892878</p>
+                        <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong>Ahmedabad, India</p>
+                        <p><i class="fas fa-globe"></i> <strong>Website:</strong> <a href="http://www.webdevservices.com" target="_blank">www.webdevservices.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
