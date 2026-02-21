@@ -19,7 +19,8 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-default-key-change-this')
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 # Get ALLOWED_HOSTS from environment variable
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1','https://apexora-n1h0.onrender.com').split(',')
+# Get ALLOWED_HOSTS from environment variable or use default
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1,apexora-n1h0.onrender.com').split(',')
 
 # CSRF Trusted Origins
 CSRF_TRUSTED_ORIGINS = [
