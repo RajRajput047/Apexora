@@ -1,0 +1,57 @@
+{% extends 'website/base.html' %}
+{% block title %}Home - Web Development & Data Extraction Services{% endblock %}
+{% block content %}
+<div class="hero-section">
+    <div class="container text-center">
+        <h1 class="hero-title">Welcome to Web Development & Data Extraction Services</h1>
+        <p class="hero-subtitle">We build cutting-edge websites and extract valuable data to drive your business forward. Let's turn your ideas into reality.</p>
+        <div class="d-flex justify-content-center">
+            <a href="{% url 'services' %}" class="btn btn-primary btn-lg hero-btn">Explore Our Services</a>
+            
+        </div>
+    </div>
+</div>
+
+<div class="features-section py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Why Choose Us?</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card feature-card h-100 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-code feature-icon"></i>
+                        <h4 class="card-title">Custom Web Development</h4>
+                        <p class="card-text">Tailored websites using the latest technologies like Django and React.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card feature-card h-100 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-database feature-icon"></i>
+                        <h4 class="card-title">Data Extraction</h4>
+                        <p class="card-text">Efficient scraping and processing of data from various sources.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card feature-card h-100 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-rocket feature-icon"></i>
+                        <h4 class="card-title">Fast & Reliable</h4>
+                        <p class="card-text">Optimized solutions for performance and scalability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cta-section text-white py-5">
+    <div class="container text-center">
+        <h3>Transform Your Ideas into Digital Success</h3>
+        <p>Let's build innovative web solutions and unlock data insights for your business. Schedule a free consultation today!</p>
+        <a href="{% url 'contact' %}" class="btn btn-light btn-lg cta-btn">Get Started Now</a>
+    </div>
+</div>
+{% endblock %}

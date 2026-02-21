@@ -1,0 +1,50 @@
+{% extends 'website/base.html' %}
+{% block title %}Our Services{% endblock %}
+{% block content %}
+<div class="services-section py-5">
+    <div class="container">
+        <h1 class="section-title text-center mb-5">Our Services</h1>
+        <p class="section-subtitle text-center mb-5">We offer comprehensive solutions in web development, data extraction, and API development to meet your business needs.</p>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card service-card h-100 text-center shadow">
+                    <div class="card-body">
+                        <i class="fas fa-code service-icon"></i>
+                        <h4 class="card-title">Web Development</h4>
+                        <p class="card-text">
+                            Transform your vision into dynamic, high-performance websites and web applications. Leveraging cutting-edge technologies like Django, React, and Bootstrap, we deliver scalable, secure, and intuitive solutions that enhance user experience, boost engagement, and drive business growth. From e-commerce platforms to custom dashboards, we tailor every project to your unique requirements for long-term success.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card service-card h-100 text-center shadow">
+                    <div class="card-body">
+                        <i class="fas fa-database service-icon"></i>
+                        <h4 class="card-title">Data Extraction</h4>
+                        <p class="card-text">
+                            Unlock valuable insights from the web with our expert data extraction services. We specialize in advanced web scraping, API data retrieval, and database integration, ensuring accurate, compliant, and structured data collection. Our process includes rigorous cleaning, validation, and analysis to provide actionable intelligence, helping you make data-driven decisions, optimize operations, and stay ahead in a competitive landscape.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card service-card h-100 text-center shadow">
+                    <div class="card-body">
+                        <i class="fas fa-cogs service-icon"></i>
+                        <h4 class="card-title">API Development</h4>
+                        <p class="card-text">
+                            Seamlessly connect systems and automate workflows with our robust API development expertise. We design and build secure, high-performance RESTful and GraphQL APIs that prioritize scalability, documentation, and real-time integration. Whether for mobile apps, third-party services, or internal tools, our APIs ensure reliable data flow, enhanced functionality, and future-proof architecture to support your evolving business needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="{% url 'contact' %}" class="btn btn-primary btn-lg service-cta-btn">Get a Quote</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
