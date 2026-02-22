@@ -45,11 +45,12 @@ def contact(request):
             )
             
             messages.success(request, 'Thank you for contacting us! We will get back to you soon.')
-            return redirect('website:contact')
+            return redirect('website:contact')  # Changed from 'website:contact' to 'contact'
         else:
             messages.error(request, 'Please fill in all fields.')
     
     return render(request, 'website/contact.html')
+
 
 def health_check(request):
     """Health check endpoint for Render"""
