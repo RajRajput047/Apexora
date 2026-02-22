@@ -28,16 +28,26 @@ def about(request):
     return render(request, 'website/about.html')
 
 def contact(request):
+    """Contact page view with form handling"""
     if request.method == 'POST':
         name = request.POST.get('name')
         email = request.POST.get('email')
         message = request.POST.get('message')
+        
+        # Validate form data
         if name and email and message:
-            ContactLead.objects.create(name=name, email=email, message=message)
-            messages.success(request, 'Thank you! We will get back to you soon.')
-            return redirect('contact')
+            # Save to database using ContactLead model
+            ContactLead.objects.create(
+                name=name,
+                email=email,
+                message=message
+            )
+            
+            messages.success(request, 'Thank you for contacting us! We will get back to you soon.')
+            return redirect('website:contact')
         else:
-            messages.error(request, 'Please fill all fields.')
+            messages.error(request, 'Please fill in all fields.')
+    
     return render(request, 'website/contact.html')
 
 
