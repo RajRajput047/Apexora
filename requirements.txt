@@ -1,7 +1,7 @@
 # Core Django
 Django==4.2.7
 
-# Database
+# Database - use binary package for Python 3.11
 psycopg2-binary==2.9.9
 dj-database-url==2.1.0
 
@@ -15,7 +15,45 @@ gunicorn==21.2.0
 # Cloudinary
 cloudinary==1.36.0
 django-cloudinary-storage==0.3.0
-Pillow>=10.1.0,<11
+Pillow==10.1.0
 
 # Security
 django-cors-headers==4.3.1
+
+# ✅ ADD THESE ESSENTIAL PACKAGES:
+
+# Django extensions and utilities
+django-extensions==3.2.3  # For additional management commands
+
+# Email sending (if you need email functionality)
+# django-smtp-ssl==1.0  # Uncomment if using email
+
+# Database connection pooling (recommended for PostgreSQL)
+dj-database-url==2.1.0  # Already have this
+
+# Timezone support
+pytz==2024.2
+
+# For better admin interface (optional)
+django-admin-interface==0.26.1
+django-colorfield==0.11.0
+
+# For debugging in development (optional)
+# django-debug-toolbar==4.3.0  # Uncomment for local dev only
+
+# For handling CORS properly (already have)
+# django-cors-headers==4.3.1
+
+# For serving media files in development (optional)
+# django-cleanup==8.1.0  # Auto-delete old files
+
+# For better URL handling (usually comes with Django)
+# Uncomment if you need it
+# urllib3==2.2.3
+# requests==2.31.0
+
+# For environment variables (already have)
+# python-dotenv==1.0.0
+
+# Database drivers (already have)
+# psycopg2-binary==2.9.9
