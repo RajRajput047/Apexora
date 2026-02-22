@@ -11,6 +11,7 @@ import json
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
+from django.http import HttpResponse
 
 def home(request):
     return render(request, 'website/home.html')
@@ -50,7 +51,9 @@ def contact(request):
     
     return render(request, 'website/contact.html')
 
-
+def health_check(request):
+    """Health check endpoint for Render"""
+    return HttpResponse("OK", status=200)
 # Make sure you set OPENAI_API_KEY in your environment variables
 
 

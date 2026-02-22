@@ -9,4 +9,5 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
     path("chatbot-api/", views.chatbot_api, name="chatbot_api"),
+    path('health/', views.health_check, name='health_check'), 
 ]
