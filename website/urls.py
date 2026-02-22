@@ -2,7 +2,6 @@ from django.urls import path
 from . import views
 
 # Add this line to define the namespace
-app_name = 'website'
 
 urlpatterns = [
     path('', views.home, name='home'),
