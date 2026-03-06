@@ -8,46 +8,62 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Add this JavaScript for number animation
+// Fixed animation that definitely works
 document.addEventListener('DOMContentLoaded', function() {
-    const stats = document.querySelectorAll('.stat-number');
-    let animated = false;
+    // Wait a moment for everything to load
+    setTimeout(initCounterAnimation, 100);
+});
+
+function initCounterAnimation() {
+    const statNumbers = document.querySelectorAll('.stat-number');
     
-    function animateNumbers() {
-        if (animated) return;
-        
-        stats.forEach(stat => {
-            const target = parseInt(stat.getAttribute('data-target'));
-            const duration = 2000; // 2 seconds
-            const step = target / (duration / 16); // 60fps
-            let current = 0;
-            
-            const updateNumber = () => {
-                current += step;
-                if (current < target) {
-                    stat.textContent = Math.floor(current) + (stat.getAttribute('data-target') == '89' ? '%' : '+');
-                    requestAnimationFrame(updateNumber);
-                } else {
-                    stat.textContent = target + (stat.getAttribute('data-target') == '89' ? '%' : '+');
-                }
-            };
-            
-            updateNumber();
-        });
-        
-        animated = true;
-    }
+    // Set initial values
+    statNumbers.forEach(stat => {
+        const target = stat.getAttribute('data-target');
+        const suffix = stat.getAttribute('data-suffix') || '';
+        stat.textContent = '0' + suffix;
+    });
     
-    // Trigger animation when section comes into view
+    // Create intersection observer
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                animateNumbers();
+                const stat = entry.target;
+                const target = parseInt(stat.getAttribute('data-target'));
+                const suffix = stat.getAttribute('data-suffix') || '';
+                
+                // Animate to target number
+                animateValue(stat, 0, target, 2000, suffix);
+                
+                // Stop observing after animation starts
+                observer.unobserve(stat);
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.3 }); // Trigger when 30% visible
     
-    const statsSection = document.querySelector('.stats-section');
-    if (statsSection) {
-        observer.observe(statsSection);
+    // Observe all stat numbers
+    statNumbers.forEach(stat => {
+        observer.observe(stat);
+    });
+}
+
+function animateValue(element, start, end, duration, suffix) {
+    let startTimestamp = null;
+    
+    function step(timestamp) {
+        if (!startTimestamp) startTimestamp = timestamp;
+        
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const currentValue = Math.floor(progress * (end - start) + start);
+        
+        // Format number with commas for thousands
+        const formattedValue = currentValue.toLocaleString();
+        element.textContent = formattedValue + suffix;
+        
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        }
     }
-});
+    
+    window.requestAnimationFrame(step);
+}
